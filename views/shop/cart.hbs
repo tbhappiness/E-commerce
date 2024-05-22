@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .mainContainer{
+            width: 95%;
+            margin: auto;
+            display: flex;
+            margin-top: 30px;
+        }
+        .cartItems{
+            display: flex;
+            row-gap: 15px;
+            flex-wrap: wrap;
+            width: 60%;
+        }
+        .item{
+            display: flex;
+            flex-wrap: wrap;
+            width: 100%;
+            height: 250px;
+            font-size: 20px;
+        }
+        .priceInfo{
+            display: flex;
+            width: 35%;
+            flex-direction: column;
+            row-gap: 10px;
+
+        }
+        .left{
+            display: flex;
+            flex-wrap: wrap;
+            width: 20%;
+            row-gap: 5px;
+            justify-content: center;
+            align-items: baseline;
+        }
+        .right{
+            width: 80%;
+            row-gap: 10px;
+            align-items: center;
+        }
+        .image{
+            background-position: center;
+            width: 160px;
+            height: 160px;
+            background-repeat: no-repeat;
+            background-size: contain;
+        }
+        button{
+            display: inline-block;
+            height: 30px;
+            width: 30px;
+            padding: 5px;
+        }
+        .totalPrice{
+            font-size: 20px;
+            
+        }
+    </style>
+    {{>csslinking}}
+</head>
+<body>
+
+    {{>navbar}}
+
+    <div class="mainContainer">
+        <ul class="cartItems">
+            {{#each cart as |c|}}
+                <li class="item">
+                    <div class="left">
+                        <div class="image" style="background-image: url({{c.id.image_url}})">
+                        </div>
+                        <div class="quantities" align="center">
+                            <a href="/shop/cart/decrease/{{c.id._id}}">
+                                <button class="dec" type="button">-</button>
+                            </a>
+                            <span class="quant">{{c.quantity}}</span>
+                            <a href="/shop/cart/increase/{{c.id._id}}">
+                                <button class="inc" type="button"> +</button>
+                            </a>
+                            <div id='{{c.id._id}}'></div>
+                        </div>
+                    </div>
+                    <div class="right">
+                        <div class="name">{{c.id.name}}</div>
+                        <div class="price">{{c.id.price}}</div>
+                    </div>
+                </li>
+            {{/each}}
+        </ul>
+        <div class="priceInfo">
+            <div class="totalPrice">Total Price: {{totalPrice}}</div>
+            <div>
+                <a href="/shop/cart/buy">
+                    <button class="buyNow" style="width: 100px; height: 50px; padding: 5px">Buy Now</button>
+                </a>
+            </div>
+        </div>
+        
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="/js/cart.js"></script>
+</body>
+</html>

@@ -1,0 +1,15 @@
+.navbar{
+    font-size: 24px;
+    background-color: pink;
+    height: 50px;
+    color: orange;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.navlinks{
+    display: block;
+    margin: 5px;
+    text-decoration: none;
+    color: rgb(193, 28, 28);
+}

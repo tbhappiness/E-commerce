@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop</title>
+    {{>csslinking}}
+</head>
+<body>
+
+    {{>navbar}}
+    
+    <div class="product-item">
+        <div class="product-image" style="background-image: url({{product.image}})"></div>
+        <div class="productName">{{product.name}}</div>
+        <div class="productPrice">{{product.price}}</div>
+        <div class="productDescription">{{product.description}}</div>
+        <div class="productSeller">{{product.seller}}</div>
+        <ul>
+            {{#each product.review as |r|}}
+                <li>{{r}}</li>
+            {{/each}}
+        </ul>
+    </div>
+
+    <a href="/shop/cart/add/{{product.id}}">
+        <button>🛒</button>
+    </a>
+    <a href="#">
+        <button>Buy Now</button>
+    </a>
+    
+</body>
+</html>

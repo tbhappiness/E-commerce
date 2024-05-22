@@ -1,0 +1,72 @@
+//fashion
+[{
+    "name": "Shirt",
+    "price": 2000,
+    "image_url": "https://m.media-amazon.com/images/I/81ZUL5rCfmL. AC UY1100 .jpg",
+    "description": "This is a shirt",
+    "seller": "Denim",
+    "category": "fashion"
+  },
+  {
+    "name": "Jeans",
+    "price": 2000,
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQS5QUB3eRluzY3SZxdSDZFA3rjsINvARNmRw&s",
+    "description": "This is a Jeans",
+    "seller": "Denim",
+    "category": "fashion"
+  },
+  {
+    "name": "Shoes",
+    "price": 2000,
+    "image_url": "https://rukminim2.flixcart.com/image/450/500/xif0q/shoe/7/z/r/8-white-leaf-8-urbanbox-white-black-original-imagvgf4cuzs2hrw.jpeg?q=90&crop=false",
+    "description": "This is a Shoe",
+    "seller": "Denim",
+    "category": "fashion"
+  },
+  {
+    "name": "Socks",
+    "price": 1000,
+    "description": "This is socks",
+    "seller": "Lokesh kanpur wala",
+    "image_url": "https://cdn.shopify.com/s/files/1/0316/1240/3844/products/sock-rocket-pride-rainbow-socks-2_900x900.png?v=1602482502",
+    "category": "fashion"
+  }]
+
+
+
+//electronics
+[
+  {
+    "name": "Laptop",
+    "price": 50000,
+    "image_url": "https://th.bing.com/th/id/OIP.AQsRqAsWlKr5Anpof3eGjwAAAA?rs=1&pid=ImgDetMain",
+    "description": "This is a high-performance laptop with a powerful processor and ample storage.",
+    "seller": "TechWorld",
+    "category": "electronics"
+  },
+  {
+    "name": "Smartphone",
+    "price": 30000,
+    "image_url": "https://th.bing.com/th/id/OIP.d_37IJDKLPKPUiaivYkUiQAAAA?rs=1&pid=ImgDetMain",
+    "description": "This is a top-of-the-line smartphone with a stunning display and advanced camera capabilities.",
+    "seller": "GadgetZone",
+    "category": "electronics"
+  },
+  {
+    "name": "Wireless Headphones",
+    "price": 8000,
+    "image_url": "https://www.bhphotovideo.com/images/images2500x2500/sony_mdr100abn_p_h_ear_on_wireless_nc_1220500.jpg",
+    "description": "These wireless headphones offer superior sound quality and a long battery life.",
+    "seller": "AudioTech",
+    "category": "electronics"
+  },
+  {
+    "name": "Smart TV",
+    "price": 40000,
+    "image_url": "https://i5.walmartimages.com/asr/d4470178-13e9-47c0-9bb4-926c7aef252a.b7058df8fc476c07d20586a0567fe366.jpeg",
+    "description": "This smart TV features a large, high-resolution display and seamless streaming capabilities.",
+    "seller": "EntertainmentHub",
+    "category": "electronics"
+  }
+]
+

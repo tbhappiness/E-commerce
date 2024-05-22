@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .btnGrp{
+            margin-top: 50px;
+            width: 500px;
+            margin: auto;
+            display: flex;
+            justify-content: space-around;
+        }
+        button{
+            font-weight: 500;
+            padding: 5px 10px;
+            font-size: 16px;
+            background-color: rgb(255, 219, 90);
+            border: none;
+            border-radius: 7px;
+            margin-top: 10px;
+        }
+    </style>
+    {{>csslinking}}
+</head>
+<body>
+
+    {{>navbar}};
+
+    {{!-- <h1 class="WelcomeMsg" align ="center">Welcome to Admin Page</h1> --}}
+
+    <div class="btnGrp">
+        <a href="/admin/products/all">
+            <button type="button">View Products</button>
+        </a>
+        <a href="/admin/products/add">
+            <button type="button">Add New Product</button>
+        </a>
+    </div>
+    
+</body>
+</html>

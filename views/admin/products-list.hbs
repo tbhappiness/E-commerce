@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Products List</title>
+    {{>productcss}}
+    {{>csslinking}}
+
+</head>
+<body>
+
+    {{>navbar}}
+
+    <div class="products">
+        {{#each products as |category|}}
+            <div class="category">
+            <div class="category-name">{{@key}}</div>
+                {{#each category as |p|}}
+                    <div class="pItem">
+                        <div class="pImage" style="background-image: url({{p.image_url}})">
+                        </div>
+                        <div class="pName" align="center">{{p.name}}</div>
+                        <div class="pPrice" align="center">₹{{p.price}}</div>
+                        <div class="pDescription" align="center">{{p.description}}</div>
+                        <div align ="center">
+                            <a href="/admin/products/update/{{p._id}}"><button>✏️</button></a>
+                            <a href="/admin/products/delete/{{p._id}}"><button>🗑️</button></a>
+                        </div>
+                    </div>
+                {{/each}}
+            </div>
+        {{/each}}
+    </div>
+
+    
+</body>
+</html>
